@@ -1,0 +1,42 @@
+#aro_card_01 {
+  grid-area: aro_card_01;
+  background-color: #eee;
+  padding: 10px 35px;
+}
+
+#aro_card_02 {
+  grid-area: aro_card_02;
+  background-color: #eee;
+  padding: 10px 35px;
+}
+
+#aro_card_03 {
+  grid-area: aro_card_03;
+  background-color: #eee;
+  padding: 10px 35px;
+}
+
+#aro_card_04 {
+  grid-area: aro_card_04;
+  background-color: #eee;
+  padding: 10px 35px;
+}
+
+#aro_card_05, #aro_card_06, #aro_card_07, #aro_card_08 {
+  background-color: #eee;
+  padding: 10px 35px;
+  grid-area: aro_card_05;
+}
+
+#aro_card_06 {
+  grid-area: aro_card_06;
+}
+
+#aro_card_07 {
+  grid-area: aro_card_07;
+}
+
+#aro_card_08 {
+  grid-area: aro_card_08;
+}
+/*# sourceMappingURL=estilosSASS.css.map */

@@ -1,0 +1,509 @@
+/* Inicio de grids y flexbox */
+.grilla_index_footer{
+    display: grid;
+    grid-template-areas: 
+        "text gmail wpp instagram";
+    grid-template-rows: 1fr;
+    grid-template-columns: 9fr 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    height: 50px;
+    width: auto;
+    background-image: linear-gradient(to top, rgb(223, 176, 116), rgba(245, 223, 182, .5));
+} 
+.text{
+    grid-area: text;
+}
+.gmail{
+    grid-area: gmail;
+}
+.wpp{
+    grid-area: wpp;
+}
+.instagram{
+    grid-area: instagram;
+}
+/* Fin de grids y flexbox */
+
+/* Inicio de Atributos generales */
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(245, 223, 182);
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgba(245, 223, 182, .5));
+}
+.bar-btn{
+    font-size: 25px;
+    color: black;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.nav-menu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgba(245, 223, 182, 0.95);
+    text-align: center;
+    transition: all .5s;
+}
+.nav-menu li{
+    background-color: rgba(245, 223, 182, 0);
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+.nav-menu li a{
+    color: black;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.nav-menu li a:hover{
+    color: rgb(223, 176, 116);
+    transition: .3s;
+}
+#check{
+    display: none;
+}
+#check:checked ~ .nav-menu{
+    height: 100vh;
+}
+#check:checked ~ .nav-menu li{
+    display: block;
+}
+ul ul{
+    position: absolute;
+    display: none;
+}
+ul ul li{
+    display: block;
+}
+p{
+    font-size: 14px;
+    text-align: center;
+}
+footer img{
+    float: right;
+    height: 40px;
+    width: 40px;
+    padding: 2px;
+}
+main{
+    min-height: 1300px;
+} 
+
+/* RESPONSIVE */
+
+@media screen and (min-width: 768px){
+    nav{
+        height: 100px;
+    }
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background-image: linear-gradient(to bottom, rgb(223, 176, 116), rgba(245, 223, 182, .5)); 
+        transition: none;
+        text-align: center;
+        margin-right: 50px;
+    }
+    .nav-menu li{
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+    .nav-menu li a{
+        font-size: 12px;
+        margin: 0%;
+        padding: 0%;
+    }
+    ul ul{
+        position: absolute;
+        display: none;
+    }
+    
+    ul ul li{
+        display: block;
+        justify-items: center;
+    }
+    
+    ul li:hover ul{
+        display: block;
+        background-color: rgba(223, 177, 116, 0.37);
+        width: 150px;
+    } 
+}
+
+/* Fin de atributos generales */
+
+/* Inicio de estilos para index.html */
+@media screen and (max-width: 768px){
+    main{
+        min-height: 800px;
+    }
+}
+/* Fin de estilos para index.html */
+
+/* HASTA ACA SEGUNDA ENTREGA DEL PROYECTO FINAL */
+
+/* Inicio de estilos para aros/pulseras/anillos.html */
+
+/* GRID Y FLEXBOX */
+#grilla_aros_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias categorias categorias aside"
+        "empty aro_image_01 aro_image_02 aro_image_03 aro_image_04 aside"
+        "empty aro_card_01 aro_card_02 aro_card_03 aro_card_04 aside"
+        "empty aro_image_05 aro_image_06 aro_image_07 aro_image_08 aside"
+        "empty aro_card_05 aro_card_06 aro_card_07 aro_card_08 aside";
+    grid-template-rows: 1fr 1fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#aro_image_01{
+    grid-area: aro_image_01;
+}
+#aro_image_02{
+    grid-area: aro_image_02;
+}
+#aro_image_03{
+    grid-area: aro_image_03;
+}
+#aro_image_04{
+    grid-area: aro_image_04;
+}
+#aro_image_05{
+    grid-area: aro_image_05;
+}
+#aro_image_06{
+    grid-area: aro_image_06;
+}
+#aro_image_07{
+    grid-area: aro_image_07;
+}
+#aro_image_08{
+    grid-area: aro_image_08;
+}
+/* #aro_card_01{
+    grid-area: aro_card_01;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_02{
+    grid-area: aro_card_02;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_03{
+    grid-area: aro_card_03;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_04{
+    grid-area: aro_card_04;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_05{
+    grid-area: aro_card_05;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_06{
+    grid-area: aro_card_06;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_07{
+    grid-area: aro_card_07;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_08{
+    grid-area: aro_card_08;
+    background-color: #eee;
+    padding: 10px 35px;
+} */
+#grilla_aros_main div:hover{
+    color: #eee;
+    background-color: black;
+    padding: 10px 35px;
+}
+
+#grilla_pulsera_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias categorias aside"
+        "empty pulsera_image_01 pulsera_image_02 aside"
+        "empty pulsera_card_01 pulsera_card_02 aside"
+        "empty pulsera_image_03 pulsera_image_04 aside"
+        "empty pulsera_card_03 pulsera_card_04 aside";
+    grid-template-rows: 1fr 1fr .2fr 1fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#pulsera_image_01{
+    grid-area: pulsera_image_01;
+}
+#pulsera_image_02{
+    grid-area: pulsera_image_02;
+}
+#pulsera_image_03{
+    grid-area: pulsera_image_03;
+}
+#pulsera_image_04{
+    grid-area: pulsera_image_04;
+}
+#pulsera_card_01{
+    grid-area: pulsera_card_01;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_01:hover{
+    color: #eee;
+    background-color: black;
+}
+#pulsera_card_02{
+    grid-area: pulsera_card_02;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_02:hover{
+    color: #eee;
+    background-color: black;
+}
+#pulsera_card_03{
+    grid-area: pulsera_card_03;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_03:hover{
+    color: #eee;
+    background-color: black;
+}
+#pulsera_card_04{
+    grid-area: pulsera_card_04;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#pulsera_card_04:hover{
+    color: #eee;
+    background-color: black;
+}
+
+#grilla_anillo_main{
+    display: grid;
+    grid-template-areas: 
+        "empty categorias aside"
+        "empty anillo_image_01 aside"
+        "empty anillo_card_01 aside";
+    grid-template-rows: .4fr .2fr .2fr;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-row-gap: 25px;
+    grid-column-gap: 25px;
+    align-items: center;
+    justify-items: center;
+}
+
+#categorias{
+    grid-area: categorias;
+}
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#anillo_image_01{
+    grid-area: anillo_image_01;
+}
+#anillo_card_01{
+    grid-area: anillo_card_01;
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#anillo_card_01:hover{
+    color: #eee;
+    background-color: black;
+}
+
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para aros/pulseras/anillos.html */
+
+/* Inicio de estilos para contacto.html */
+#card_contacto input{
+    width: 200px;
+    padding: 2px;
+    margin: 10px;
+}
+/* GRID Y FLEXBOX */
+#grilla_contacto_main{
+    display: grid;
+    grid-template-areas: 
+        "empty contacto aside"
+        "empty intro_contacto aside"
+        "empty card_contacto aside";
+    grid-template-rows: .2fr .2fr .4fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#contacto{
+    grid-area: contacto;
+}
+#intro_contacto{
+    grid-area: intro_contacto;
+}
+#card_contacto{
+    grid-area: card_contacto;
+    background-color: #eee;
+    padding: 80px 100px;
+    border-radius: 25px;
+}
+#deco_nosotros{
+    grid-area: deco_nosotros;
+    
+}
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para contacto.html */
+
+/* Inicio de estilos para nosotros.html */
+#banner_nosotros img{
+    height: auto;
+    width: auto;
+}
+#deco_nosotros img{
+    height: auto;
+    width: 500px;
+}
+
+/* GRID Y FLEXBOX */
+#grilla_nosotros_main{
+    display: grid;
+    grid-template-areas: 
+        "empty nosotros nosotros aside"
+        "empty banner_nosotros intro_nosotros aside"
+        "empty banner_nosotros intro_nosotros aside"
+        "empty banner_nosotros deco_nosotros aside";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: .2fr 2fr 4fr .2fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 50px;
+}
+
+#aside{
+    grid-area: aside;
+}
+#empty{
+    grid-area: empty;
+}
+#nosotros{
+    grid-area: nosotros;
+}
+#intro_nosotros{
+    grid-area: intro_nosotros;
+}
+#banner_nosotros{
+    grid-area: banner_nosotros;
+    
+}
+#deco_nosotros{
+    grid-area: deco_nosotros;
+    
+}
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para nosotros.html */
+
+/* Inicio de estilos para preguntas.html */
+/* GRID Y FLEXBOX */
+#grilla_preguntas_main{
+    display: grid;
+    grid-template-areas: 
+        "empty preguntas preguntas preguntas preguntas aside"
+        "empty intro_preguntas intro_preguntas intro_preguntas intro_preguntas aside"
+        "empty preguntas_01 preguntas_02 preguntas_03 preguntas_04 aside";
+    grid-template-rows: 1fr .5fr 2fr;
+    grid-template-columns: .2fr 1fr 1fr 1fr 1fr .2fr;
+    justify-items: center;
+    align-items: center;
+    grid-column-gap: 50px;
+}
+
+#preguntas{
+    grid-area: preguntas;
+}
+#intro_preguntas{
+    grid-area: intro_preguntas;
+}
+#preguntas_01{
+    grid-area: preguntas_01;
+    
+}
+#preguntas_02{
+    grid-area: preguntas_02;
+    
+}
+#preguntas_03{
+    grid-area: preguntas_03;
+    
+}
+#preguntas_04{
+    grid-area: preguntas_04;
+    
+} 
+/* Fin GRID Y FLEXBOX */
+/* Fin de estilos para preguntas.html */
+

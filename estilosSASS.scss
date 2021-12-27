@@ -1,0 +1,43 @@
+//MAP
+
+$aro-card:(
+    01: aro_card_01,
+    02: aro_card_02, 
+    03: aro_card_03, 
+    04: aro_card_04, 
+);
+@each $card, $grid in $aro-card{
+    #aro_card_0#{$card} {
+        grid-area: $grid;
+        background-color: #eee;
+        padding: 10px 35px;
+    }
+}
+
+//MIXIN {}
+
+@mixin card-aros(){
+    background-color: #eee;
+    padding: 10px 35px;
+}
+#aro_card_05{
+    @include card-aros();
+    grid-area: aro_card_05;
+}
+
+//EXTEND
+
+#aro_card_06{
+    @extend #aro_card_05;
+    grid-area: aro_card_06;
+}
+
+#aro_card_07{
+    @extend #aro_card_05;
+    grid-area: aro_card_07;
+}
+
+#aro_card_08{
+    @extend #aro_card_05;
+    grid-area: aro_card_08;
+}
